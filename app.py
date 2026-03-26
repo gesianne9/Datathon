@@ -268,8 +268,20 @@ if modelo:
         st.write("Explore os dados históricos e a evolução de todos os alunos da Associação Passos Mágicos.")
         
         power_bi_link = "https://app.powerbi.com/view?r=eyJrIjoiM2E2MDQ3NWUtNWNlMC00ZDgyLWFmZTUtZGY1NDZjYzhhYmQzIiwidCI6IjExZGJiZmUyLTg5YjgtNDU0OS1iZTEwLWNlYzM2NGU1OTU1MSIsImMiOjR9" 
-        st.components.v1.iframe(power_bi_link, width=1000, height=600, scrolling=True)
-
+        
+        
+        st.components.v1.html(
+            f"""
+            <iframe title="Seu Titulo" 
+                width="100%" 
+                height="600" 
+                src= {power_bi_link}
+                frameborder="0" 
+                allowFullScreen="true">
+            </iframe>
+            """,
+            height= 800, 
+        )
 
 # ==============================================================================
 # RODAPÉ 
